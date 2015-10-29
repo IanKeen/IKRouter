@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		32E364021BE2AA4100E9A6FD /* IKRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364011BE2AA4100E9A6FD /* IKRouterTests.swift */; };
+		32E364261BE2D64100E9A6FD /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364211BE2D64100E9A6FD /* Routable.swift */; settings = {ASSET_TAGS = (); }; };
+		32E364271BE2D64100E9A6FD /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364221BE2D64100E9A6FD /* Route.swift */; settings = {ASSET_TAGS = (); }; };
+		32E364281BE2D64100E9A6FD /* RouteComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364231BE2D64100E9A6FD /* RouteComponents.swift */; settings = {ASSET_TAGS = (); }; };
+		32E364291BE2D64100E9A6FD /* RouteMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364241BE2D64100E9A6FD /* RouteMatcher.swift */; settings = {ASSET_TAGS = (); }; };
+		32E3642A1BE2D64100E9A6FD /* IKRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364251BE2D64100E9A6FD /* IKRouter.swift */; settings = {ASSET_TAGS = (); }; };
+		32E364391BE2D65300E9A6FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E3642C1BE2D65300E9A6FD /* AppDelegate.swift */; settings = {ASSET_TAGS = (); }; };
+		32E3643A1BE2D65300E9A6FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E3642D1BE2D65300E9A6FD /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
+		32E3643B1BE2D65300E9A6FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32E3642E1BE2D65300E9A6FD /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
+		32E3643C1BE2D65300E9A6FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 32E364301BE2D65300E9A6FD /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		32E3643D1BE2D65300E9A6FD /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364321BE2D65300E9A6FD /* BaseViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		32E3643E1BE2D65300E9A6FD /* Blue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364331BE2D65300E9A6FD /* Blue.swift */; settings = {ASSET_TAGS = (); }; };
+		32E3643F1BE2D65300E9A6FD /* Green.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364341BE2D65300E9A6FD /* Green.swift */; settings = {ASSET_TAGS = (); }; };
+		32E364411BE2D65300E9A6FD /* Red.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364361BE2D65300E9A6FD /* Red.swift */; settings = {ASSET_TAGS = (); }; };
+		32E364421BE2D65300E9A6FD /* URLRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364371BE2D65300E9A6FD /* URLRoutes.swift */; settings = {ASSET_TAGS = (); }; };
+		32E364431BE2D65300E9A6FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364381BE2D65300E9A6FD /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		32E363FE1BE2AA4100E9A6FD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 32E363E11BE2AA4100E9A6FD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 32E363E81BE2AA4100E9A6FD;
+			remoteInfo = IKRouter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		32E363E91BE2AA4100E9A6FD /* IKRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		32E363FD1BE2AA4100E9A6FD /* IKRouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IKRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		32E364011BE2AA4100E9A6FD /* IKRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IKRouterTests.swift; sourceTree = "<group>"; };
+		32E364031BE2AA4100E9A6FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32E364211BE2D64100E9A6FD /* Routable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
+		32E364221BE2D64100E9A6FD /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		32E364231BE2D64100E9A6FD /* RouteComponents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteComponents.swift; sourceTree = "<group>"; };
+		32E364241BE2D64100E9A6FD /* RouteMatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMatcher.swift; sourceTree = "<group>"; };
+		32E364251BE2D64100E9A6FD /* IKRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IKRouter.swift; sourceTree = "<group>"; };
+		32E3642C1BE2D65300E9A6FD /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		32E3642D1BE2D65300E9A6FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		32E3642F1BE2D65300E9A6FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		32E364311BE2D65300E9A6FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		32E364321BE2D65300E9A6FD /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		32E364331BE2D65300E9A6FD /* Blue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Blue.swift; sourceTree = "<group>"; };
+		32E364341BE2D65300E9A6FD /* Green.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Green.swift; sourceTree = "<group>"; };
+		32E364351BE2D65300E9A6FD /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		32E364361BE2D65300E9A6FD /* Red.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Red.swift; sourceTree = "<group>"; };
+		32E364371BE2D65300E9A6FD /* URLRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRoutes.swift; sourceTree = "<group>"; };
+		32E364381BE2D65300E9A6FD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32E363E61BE2AA4100E9A6FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32E363FA1BE2AA4100E9A6FD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		32E363E01BE2AA4100E9A6FD = {
+			isa = PBXGroup;
+			children = (
+				32E363EB1BE2AA4100E9A6FD /* IKRouter */,
+				32E3642B1BE2D65300E9A6FD /* IKRouterUI */,
+				32E364001BE2AA4100E9A6FD /* IKRouterTests */,
+				32E363EA1BE2AA4100E9A6FD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		32E363EA1BE2AA4100E9A6FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32E363E91BE2AA4100E9A6FD /* IKRouter.app */,
+				32E363FD1BE2AA4100E9A6FD /* IKRouterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		32E363EB1BE2AA4100E9A6FD /* IKRouter */ = {
+			isa = PBXGroup;
+			children = (
+				32E364211BE2D64100E9A6FD /* Routable.swift */,
+				32E364221BE2D64100E9A6FD /* Route.swift */,
+				32E364231BE2D64100E9A6FD /* RouteComponents.swift */,
+				32E364241BE2D64100E9A6FD /* RouteMatcher.swift */,
+				32E364251BE2D64100E9A6FD /* IKRouter.swift */,
+			);
+			path = IKRouter;
+			sourceTree = "<group>";
+		};
+		32E364001BE2AA4100E9A6FD /* IKRouterTests */ = {
+			isa = PBXGroup;
+			children = (
+				32E364011BE2AA4100E9A6FD /* IKRouterTests.swift */,
+				32E364031BE2AA4100E9A6FD /* Info.plist */,
+			);
+			path = IKRouterTests;
+			sourceTree = "<group>";
+		};
+		32E3642B1BE2D65300E9A6FD /* IKRouterUI */ = {
+			isa = PBXGroup;
+			children = (
+				32E3642C1BE2D65300E9A6FD /* AppDelegate.swift */,
+				32E3642D1BE2D65300E9A6FD /* Assets.xcassets */,
+				32E3642E1BE2D65300E9A6FD /* LaunchScreen.storyboard */,
+				32E364301BE2D65300E9A6FD /* Main.storyboard */,
+				32E364321BE2D65300E9A6FD /* BaseViewController.swift */,
+				32E364331BE2D65300E9A6FD /* Blue.swift */,
+				32E364341BE2D65300E9A6FD /* Green.swift */,
+				32E364351BE2D65300E9A6FD /* Info.plist */,
+				32E364361BE2D65300E9A6FD /* Red.swift */,
+				32E364371BE2D65300E9A6FD /* URLRoutes.swift */,
+				32E364381BE2D65300E9A6FD /* ViewController.swift */,
+			);
+			path = IKRouterUI;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		32E363E81BE2AA4100E9A6FD /* IKRouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32E364061BE2AA4100E9A6FD /* Build configuration list for PBXNativeTarget "IKRouter" */;
+			buildPhases = (
+				32E363E51BE2AA4100E9A6FD /* Sources */,
+				32E363E61BE2AA4100E9A6FD /* Frameworks */,
+				32E363E71BE2AA4100E9A6FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IKRouter;
+			productName = IKRouter;
+			productReference = 32E363E91BE2AA4100E9A6FD /* IKRouter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		32E363FC1BE2AA4100E9A6FD /* IKRouterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 32E364091BE2AA4100E9A6FD /* Build configuration list for PBXNativeTarget "IKRouterTests" */;
+			buildPhases = (
+				32E363F91BE2AA4100E9A6FD /* Sources */,
+				32E363FA1BE2AA4100E9A6FD /* Frameworks */,
+				32E363FB1BE2AA4100E9A6FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				32E363FF1BE2AA4100E9A6FD /* PBXTargetDependency */,
+			);
+			name = IKRouterTests;
+			productName = IKRouterTests;
+			productReference = 32E363FD1BE2AA4100E9A6FD /* IKRouterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		32E363E11BE2AA4100E9A6FD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Mustard;
+				TargetAttributes = {
+					32E363E81BE2AA4100E9A6FD = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					32E363FC1BE2AA4100E9A6FD = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 32E363E81BE2AA4100E9A6FD;
+					};
+				};
+			};
+			buildConfigurationList = 32E363E41BE2AA4100E9A6FD /* Build configuration list for PBXProject "IKRouter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 32E363E01BE2AA4100E9A6FD;
+			productRefGroup = 32E363EA1BE2AA4100E9A6FD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				32E363E81BE2AA4100E9A6FD /* IKRouter */,
+				32E363FC1BE2AA4100E9A6FD /* IKRouterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		32E363E71BE2AA4100E9A6FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32E3643C1BE2D65300E9A6FD /* Main.storyboard in Resources */,
+				32E3643A1BE2D65300E9A6FD /* Assets.xcassets in Resources */,
+				32E3643B1BE2D65300E9A6FD /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32E363FB1BE2AA4100E9A6FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		32E363E51BE2AA4100E9A6FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32E364391BE2D65300E9A6FD /* AppDelegate.swift in Sources */,
+				32E364291BE2D64100E9A6FD /* RouteMatcher.swift in Sources */,
+				32E364261BE2D64100E9A6FD /* Routable.swift in Sources */,
+				32E3642A1BE2D64100E9A6FD /* IKRouter.swift in Sources */,
+				32E364271BE2D64100E9A6FD /* Route.swift in Sources */,
+				32E3643F1BE2D65300E9A6FD /* Green.swift in Sources */,
+				32E364431BE2D65300E9A6FD /* ViewController.swift in Sources */,
+				32E3643E1BE2D65300E9A6FD /* Blue.swift in Sources */,
+				32E3643D1BE2D65300E9A6FD /* BaseViewController.swift in Sources */,
+				32E364281BE2D64100E9A6FD /* RouteComponents.swift in Sources */,
+				32E364421BE2D65300E9A6FD /* URLRoutes.swift in Sources */,
+				32E364411BE2D65300E9A6FD /* Red.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		32E363F91BE2AA4100E9A6FD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32E364021BE2AA4100E9A6FD /* IKRouterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		32E363FF1BE2AA4100E9A6FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 32E363E81BE2AA4100E9A6FD /* IKRouter */;
+			targetProxy = 32E363FE1BE2AA4100E9A6FD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		32E3642E1BE2D65300E9A6FD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32E3642F1BE2D65300E9A6FD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		32E364301BE2D65300E9A6FD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				32E364311BE2D65300E9A6FD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		32E364041BE2AA4100E9A6FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		32E364051BE2AA4100E9A6FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		32E364071BE2AA4100E9A6FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/IKRouterUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.IKRouter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		32E364081BE2AA4100E9A6FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/IKRouterUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.IKRouter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		32E3640A1BE2AA4100E9A6FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IKRouterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.IKRouterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IKRouter.app/IKRouter";
+			};
+			name = Debug;
+		};
+		32E3640B1BE2AA4100E9A6FD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IKRouterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mustard.IKRouterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IKRouter.app/IKRouter";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		32E363E41BE2AA4100E9A6FD /* Build configuration list for PBXProject "IKRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32E364041BE2AA4100E9A6FD /* Debug */,
+				32E364051BE2AA4100E9A6FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32E364061BE2AA4100E9A6FD /* Build configuration list for PBXNativeTarget "IKRouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32E364071BE2AA4100E9A6FD /* Debug */,
+				32E364081BE2AA4100E9A6FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		32E364091BE2AA4100E9A6FD /* Build configuration list for PBXNativeTarget "IKRouterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				32E3640A1BE2AA4100E9A6FD /* Debug */,
+				32E3640B1BE2AA4100E9A6FD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 32E363E11BE2AA4100E9A6FD /* Project object */;
+}
