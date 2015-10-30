@@ -11,7 +11,7 @@ import XCTest
 
 class RouteComponentsTests: XCTestCase {
     func test_RouteComponents_validUrl_should_populateProperties() {
-        let url = "appscheme://path/to/thing?foo=bar&thing=blah"
+        let url = NSURL(string: "appscheme://path/to/thing?foo=bar&thing=blah")!
         guard let components = RouteComponents(url: url) else { XCTFail(); return }
         
         XCTAssertTrue(components.scheme == "appscheme")
@@ -19,7 +19,7 @@ class RouteComponentsTests: XCTestCase {
         XCTAssertTrue(components.query["foo"] == "bar")
     }
     func test_RouteComponents_invalidScheme_should_returnNil() {
-        let url = "/path/to/thing?foo=bar&thing=blah"
+        let url = NSURL(string: "/path/to/thing?foo=bar&thing=blah")!
         guard let _ = RouteComponents(url: url) else {
             XCTAssert(true)
             return
@@ -27,7 +27,7 @@ class RouteComponentsTests: XCTestCase {
         XCTFail()
     }
     func test_RouteComponents_invalidQuery_should_returnNil() {
-        let url = "/path/to/thing?foo=bar&thing=blah&thing"
+        let url = NSURL(string: "appscheme://path/to/thing?foo=bar&thing=blah&thing")!
         guard let _ = RouteComponents(url: url) else {
             XCTAssert(true)
             return
