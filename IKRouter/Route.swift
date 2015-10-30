@@ -34,4 +34,8 @@ struct MatchedRoute {
         self.parameters = parameters
         self.query = route.components.query
     }
+    
+    subscript (parameterOrQuery: String) -> String? {
+        get { return self.parameters[parameterOrQuery] ?? self.query[parameterOrQuery] }
+    }
 }
