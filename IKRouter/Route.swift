@@ -20,6 +20,26 @@ struct Route {
         guard let components = RouteComponents(url: url) else { return nil }
         self.components = components
     }
+    
+    func matchedRoute(matcher: RouteMatcher) -> MatchedRoute? {
+        let components = self.components
+        if (components.scheme != matcher.scheme) { return nil }
+        if (components.path.count != matcher.path.count) { return nil }
+        
+        var parameters = [String: String]()
+        for (index, pathSegment) in components.path.enumerate() {
+            let otherSegment = matcher.path[index]
+            if (pathSegment == otherSegment) { continue }
+            if (pathSegment.hasPrefix(":") != otherSegment.hasPrefix(":")) {
+                let param = (pathSegment.hasPrefix(":") ? pathSegment : otherSegment)
+                let value = (pathSegment.hasPrefix(":") ? otherSegment : pathSegment)
+                parameters[param] = value
+                continue
+            }
+            return nil
+        }
+        return MatchedRoute(route: self, parameters: parameters)
+    }
 }
 
 struct MatchedRoute {

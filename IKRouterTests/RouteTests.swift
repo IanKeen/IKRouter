@@ -34,4 +34,25 @@ class RouteTests: XCTestCase {
         }
         XCTFail()
     }
+    
+    func test_Route_matchingRoute_should_produceMatchedRoute() {
+        let matcher = RouteMatcher(url: "myapp://path/to/:thing")!
+        let route = Route(url: "myapp://path/to/foobar")!
+        
+        if let _ = route.matchedRoute(matcher) {
+            XCTAssertTrue(true)
+        } else {
+            XCTFail()
+        }
+    }
+    func test_Route_nonMatchingRoute_should_notProduceMatchedRoute() {
+        let matcher = RouteMatcher(url: "myapp://path/to/:thing")!
+        let route = Route(url: "myapp://path/to/foo/bar")!
+        
+        if let _ = route.matchedRoute(matcher) {
+            XCTFail()
+        } else {
+            XCTAssertTrue(true)
+        }
+    }
 }
