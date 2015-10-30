@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32E364021BE2AA4100E9A6FD /* IKRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364011BE2AA4100E9A6FD /* IKRouterTests.swift */; };
 		32E364261BE2D64100E9A6FD /* Routable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364211BE2D64100E9A6FD /* Routable.swift */; settings = {ASSET_TAGS = (); }; };
 		32E364271BE2D64100E9A6FD /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364221BE2D64100E9A6FD /* Route.swift */; settings = {ASSET_TAGS = (); }; };
 		32E364281BE2D64100E9A6FD /* RouteComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364231BE2D64100E9A6FD /* RouteComponents.swift */; settings = {ASSET_TAGS = (); }; };
@@ -23,6 +22,7 @@
 		32E364411BE2D65300E9A6FD /* Red.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364361BE2D65300E9A6FD /* Red.swift */; settings = {ASSET_TAGS = (); }; };
 		32E364421BE2D65300E9A6FD /* URLRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364371BE2D65300E9A6FD /* URLRoutes.swift */; settings = {ASSET_TAGS = (); }; };
 		32E364431BE2D65300E9A6FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364381BE2D65300E9A6FD /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		32E3644D1BE3370900E9A6FD /* RouteComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E3644C1BE3370900E9A6FD /* RouteComponentsTests.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +38,6 @@
 /* Begin PBXFileReference section */
 		32E363E91BE2AA4100E9A6FD /* IKRouter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKRouter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E363FD1BE2AA4100E9A6FD /* IKRouterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IKRouterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		32E364011BE2AA4100E9A6FD /* IKRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IKRouterTests.swift; sourceTree = "<group>"; };
 		32E364031BE2AA4100E9A6FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32E364211BE2D64100E9A6FD /* Routable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routable.swift; sourceTree = "<group>"; };
 		32E364221BE2D64100E9A6FD /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
@@ -56,6 +55,7 @@
 		32E364361BE2D65300E9A6FD /* Red.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Red.swift; sourceTree = "<group>"; };
 		32E364371BE2D65300E9A6FD /* URLRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRoutes.swift; sourceTree = "<group>"; };
 		32E364381BE2D65300E9A6FD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		32E3644C1BE3370900E9A6FD /* RouteComponentsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteComponentsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,8 +110,8 @@
 		32E364001BE2AA4100E9A6FD /* IKRouterTests */ = {
 			isa = PBXGroup;
 			children = (
-				32E364011BE2AA4100E9A6FD /* IKRouterTests.swift */,
 				32E364031BE2AA4100E9A6FD /* Info.plist */,
+				32E3644C1BE3370900E9A6FD /* RouteComponentsTests.swift */,
 			);
 			path = IKRouterTests;
 			sourceTree = "<group>";
@@ -254,7 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32E364021BE2AA4100E9A6FD /* IKRouterTests.swift in Sources */,
+				32E3644D1BE3370900E9A6FD /* RouteComponentsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

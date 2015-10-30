@@ -62,7 +62,10 @@ class IKRouter {
         return self
     }
     func registerRouteHandler(route: String, handler: ((Route) -> Bool)?) -> IKRouter {
-        let matcher = RouteMatcher(url: route)
+        guard let matcher = RouteMatcher(url: route) else {
+            print("Unable to create route from input: \(route)")
+            return self
+        }
         let registration = RouteHandlerRegistration(routeHandler: handler, matcher: matcher)
         self.routeHandlers.append(registration)
         return self
@@ -71,7 +74,10 @@ class IKRouter {
         var handled: Bool?
         defer { completion?(handled ?? false) }
         
-        let route = Route(url: url)
+        guard let route = Route(url: url) else {
+            print("Invalid incoming url: \(url.absoluteString)")
+            return false
+        }
         guard let handlerAndMatched = self.routeHandlerAndMatchedRoute(route) else { return false }
         
         if let controllerChain = self.routableChain(handlerAndMatched.registration), let chainHandler = self.chainHandler {

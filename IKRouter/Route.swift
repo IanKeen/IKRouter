@@ -12,12 +12,13 @@ struct Route {
     let url: String
     let components: RouteComponents
     
-    init(url: NSURL) {
+    init?(url: NSURL) {
         self.init(url: url.absoluteString)
     }
-    init(url: String) {
+    init?(url: String) {
         self.url = url
-        self.components = RouteComponents(url: url)
+        guard let components = RouteComponents(url: url) else { return nil }
+        self.components = components
     }
 }
 

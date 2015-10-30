@@ -13,12 +13,13 @@ struct RouteComponents {
     let path: [String]
     let query: [String: String]
     
-    init(url: NSURL) {
+    init?(url: NSURL) {
         self.init(url: url.absoluteString)
     }
-    init(url: String) {
+    init?(url: String) {
         let urlComponents = url.componentsSeparatedByString("://")
-        self.scheme = urlComponents.first!
+        guard let scheme = urlComponents.first else { return nil }
+        self.scheme = scheme
         
         var path = [String]()
         var query = [String: String]()
@@ -31,6 +32,7 @@ struct RouteComponents {
             if let queryPairs = pathComponents.last?.componentsSeparatedByString("&") where pathComponents.count > 1 {
                 for pair in queryPairs {
                     let pairComponents = pair.componentsSeparatedByString("=")
+                    if (pairComponents.count != 2) { return nil }
                     query[pairComponents.first!] = pairComponents.last!
                 }
             }

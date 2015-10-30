@@ -13,9 +13,10 @@ struct RouteMatcher {
     let path: [String]
     var parameters: [String] { return self.path.filter({ $0.hasPrefix(":") }) }
     
-    init(url: String) {
+    init?(url: String) {
         let urlComponents = url.componentsSeparatedByString("://")
-        self.scheme = urlComponents.first!
+        guard let scheme = urlComponents.first else { return nil }
+        self.scheme = scheme
         
         var path = [String]()
         
