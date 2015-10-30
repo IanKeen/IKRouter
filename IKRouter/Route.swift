@@ -31,9 +31,7 @@ struct Route {
             let otherSegment = matcher.path[index]
             if (pathSegment == otherSegment) { continue }
             if (pathSegment.hasPrefix(":") != otherSegment.hasPrefix(":")) {
-                let param = (pathSegment.hasPrefix(":") ? pathSegment : otherSegment)
-                let value = (pathSegment.hasPrefix(":") ? otherSegment : pathSegment)
-                parameters[param] = value
+                parameters[otherSegment] = pathSegment
                 continue
             }
             return nil
