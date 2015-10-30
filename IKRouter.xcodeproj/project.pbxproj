@@ -25,6 +25,7 @@
 		32E3644D1BE3370900E9A6FD /* RouteComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E3644C1BE3370900E9A6FD /* RouteComponentsTests.swift */; settings = {ASSET_TAGS = (); }; };
 		32E3644F1BE33BD500E9A6FD /* RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E3644E1BE33BD500E9A6FD /* RouteTests.swift */; settings = {ASSET_TAGS = (); }; };
 		32E364511BE33E6100E9A6FD /* RouteMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364501BE33E6100E9A6FD /* RouteMatcherTests.swift */; settings = {ASSET_TAGS = (); }; };
+		32E364531BE33F7100E9A6FD /* IKRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364521BE33F7100E9A6FD /* IKRouterTests.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		32E3644C1BE3370900E9A6FD /* RouteComponentsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteComponentsTests.swift; sourceTree = "<group>"; };
 		32E3644E1BE33BD500E9A6FD /* RouteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTests.swift; sourceTree = "<group>"; };
 		32E364501BE33E6100E9A6FD /* RouteMatcherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMatcherTests.swift; sourceTree = "<group>"; };
+		32E364521BE33F7100E9A6FD /* IKRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IKRouterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 				32E3644E1BE33BD500E9A6FD /* RouteTests.swift */,
 				32E3644C1BE3370900E9A6FD /* RouteComponentsTests.swift */,
 				32E364501BE33E6100E9A6FD /* RouteMatcherTests.swift */,
+				32E364521BE33F7100E9A6FD /* IKRouterTests.swift */,
 			);
 			path = IKRouterTests;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			files = (
 				32E3644D1BE3370900E9A6FD /* RouteComponentsTests.swift in Sources */,
 				32E364511BE33E6100E9A6FD /* RouteMatcherTests.swift in Sources */,
+				32E364531BE33F7100E9A6FD /* IKRouterTests.swift in Sources */,
 				32E3644F1BE33BD500E9A6FD /* RouteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

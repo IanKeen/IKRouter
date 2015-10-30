@@ -14,7 +14,7 @@ private struct RoutableParameterRegistration {
     let parameter: String
 }
 private struct RouteHandlerRegistration {
-    let routeHandler: ((Route) -> Bool)?
+    let routeHandler: ((MatchedRoute) -> Bool)?
     let matcher: RouteMatcher
 }
 
@@ -61,7 +61,7 @@ class IKRouter {
         self.parameterRoutables.append(registration)
         return self
     }
-    func registerRouteHandler(route: String, handler: ((Route) -> Bool)?) -> IKRouter {
+    func registerRouteHandler(route: String, handler: ((MatchedRoute) -> Bool)?) -> IKRouter {
         guard let matcher = RouteMatcher(url: route) else {
             print("Unable to create route from input: \(route)")
             return self
@@ -85,7 +85,7 @@ class IKRouter {
             handled = chainHandler(controllers)
             
         } else {
-            handled = handlerAndMatched.registration.routeHandler?(route)
+            handled = handlerAndMatched.registration.routeHandler?(handlerAndMatched.matchedRoute)
         }
         
         return handled ?? false
