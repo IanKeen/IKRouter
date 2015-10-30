@@ -23,6 +23,7 @@
 		32E364421BE2D65300E9A6FD /* URLRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364371BE2D65300E9A6FD /* URLRoutes.swift */; settings = {ASSET_TAGS = (); }; };
 		32E364431BE2D65300E9A6FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364381BE2D65300E9A6FD /* ViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		32E3644D1BE3370900E9A6FD /* RouteComponentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E3644C1BE3370900E9A6FD /* RouteComponentsTests.swift */; settings = {ASSET_TAGS = (); }; };
+		32E3644F1BE33BD500E9A6FD /* RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E3644E1BE33BD500E9A6FD /* RouteTests.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		32E364371BE2D65300E9A6FD /* URLRoutes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLRoutes.swift; sourceTree = "<group>"; };
 		32E364381BE2D65300E9A6FD /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		32E3644C1BE3370900E9A6FD /* RouteComponentsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteComponentsTests.swift; sourceTree = "<group>"; };
+		32E3644E1BE33BD500E9A6FD /* RouteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				32E364031BE2AA4100E9A6FD /* Info.plist */,
+				32E3644E1BE33BD500E9A6FD /* RouteTests.swift */,
 				32E3644C1BE3370900E9A6FD /* RouteComponentsTests.swift */,
 			);
 			path = IKRouterTests;
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32E3644D1BE3370900E9A6FD /* RouteComponentsTests.swift in Sources */,
+				32E3644F1BE33BD500E9A6FD /* RouteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

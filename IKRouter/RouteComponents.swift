@@ -18,7 +18,7 @@ struct RouteComponents {
     }
     init?(url: String) {
         let urlComponents = url.componentsSeparatedByString("://")
-        guard let scheme = urlComponents.first else { return nil }
+        guard let scheme = urlComponents.first where urlComponents.count > 1 else { return nil }
         self.scheme = scheme
         
         var path = [String]()
