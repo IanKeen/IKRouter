@@ -42,8 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .registerRouteHandler(URLRoutes.BlueRedGreen.rawValue, handler: nil)
             .chainHandler = self.routeHandler
     }
-    private func routeHandler(routables: [Routable]) -> Bool {
-        let viewControllers = routables.flatMap { $0 as? UIViewController }
+    private func routeHandler(viewControllers: [UIViewController]) -> Bool {
         let stack = [self.navController.viewControllers.first!] + viewControllers
         self.navController.setViewControllers(stack, animated: true)
         return true

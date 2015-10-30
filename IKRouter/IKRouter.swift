@@ -20,7 +20,7 @@ private struct RouteHandlerRegistration {
 
 class IKRouter {
     typealias RouteHandlerCompletion = (Bool) -> Void
-    typealias RouteChainHandler = [Routable] -> Bool
+    typealias RouteChainHandler = [UIViewController] -> Bool
     
     //MARK: - Private Properties
     private var parameterRoutables = [RoutableParameterRegistration]()
@@ -59,7 +59,8 @@ class IKRouter {
         guard let handlerAndMatched = self.routeHandlerAndMatchedRoute(route) else { return false }
         
         if let controllerChain = self.routableChain(handlerAndMatched.registration), let chainHandler = self.chainHandler {
-            let controllers = controllerChain.flatMap { $0.routableType.instanceForRoute(handlerAndMatched.matchedRoute) }
+            let controllers = controllerChain
+                .flatMap { $0.routableType.instanceForRoute(handlerAndMatched.matchedRoute) as? UIViewController }
             handled = chainHandler(controllers)
             
         } else {
