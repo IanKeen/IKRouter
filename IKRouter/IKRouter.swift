@@ -18,15 +18,22 @@ private struct RouteHandlerRegistration {
     let matcher: RouteMatcher
 }
 
+enum IKRouterError: ErrorType {
+    case InvalidRouteRegistration(String)
+    case InvalidIncomingURL(String)
+}
+
 class IKRouter {
     typealias RouteHandlerCompletion = (Bool) -> Void
     typealias RouteChainHandler = [UIViewController] -> Bool
+    typealias ErrorHandler = (ErrorType) -> Void
     
     //MARK: - Private Properties
     private var parameterRoutables = [RoutableParameterRegistration]()
     private var routeHandlers = [RouteHandlerRegistration]()
     
     //MARK: - Public Properties
+    var errorHandler: ErrorHandler?
     var chainHandler: RouteChainHandler?
     
     //MARK: - Public
@@ -34,6 +41,7 @@ class IKRouter {
         //
         //TODO -    validate the passed parameter to make sure its valid
         //          we only want a _single_ parameter, no multiples, no wildcards
+        //          currently invalid parameters would just be ignored and never fire as part of a route match
         //
         let registration = RoutableParameterRegistration(routableType: routable, parameter: parameter)
         self.parameterRoutables.append(registration)
@@ -41,7 +49,7 @@ class IKRouter {
     }
     func registerRouteHandler(route: String, handler: ((MatchedRoute) -> Bool)?) -> IKRouter {
         guard let matcher = RouteMatcher(url: route) else {
-            print("Unable to create route from input: \(route)")
+            self.errorHandler?(IKRouterError.InvalidRouteRegistration(route))
             return self
         }
         let registration = RouteHandlerRegistration(routeHandler: handler, matcher: matcher)
@@ -53,7 +61,7 @@ class IKRouter {
         defer { completion?(handled ?? false) }
         
         guard let route = Route(url: url) else {
-            print("Invalid incoming url: \(url.absoluteString)")
+            self.errorHandler?(IKRouterError.InvalidIncomingURL(url.absoluteString))
             return false
         }
         guard let handlerAndMatched = self.routeHandlerAndMatchedRoute(route) else { return false }

@@ -10,6 +10,28 @@ import XCTest
 @testable import IKRouter
 
 class IKRouterTests: XCTestCase {
+    func test_IKRouter_whenInvalidRouteIsRegistered_itShould_notifyViaErrorHandler() {
+        let exp = self.expectationWithDescription("")
+        
+        let router = IKRouter()
+        router.errorHandler = { error in
+            exp.fulfill()
+        }
+        router.registerRouteHandler("invalid_route", handler: nil)
+        
+        self.waitForExpectationsWithTimeout(1, handler: nil)
+    }
+    func test_IKRouter_whenIncomingURLIsInvalid_itShould_notifyViaErrorHandler() {
+        let exp = self.expectationWithDescription("")
+        
+        let router = IKRouter()
+        router.errorHandler = { error in
+            exp.fulfill()
+        }
+        router.handleURL(NSURL(string: "invalid_url")!)
+        
+        self.waitForExpectationsWithTimeout(1, handler: nil)
+    }
     func test_IKRouter_whenEmpty_itShould_notHandleAnyURLs() {
         let router = IKRouter()
         let externalUrl = router.handleURL(NSURL(string: "http://google.com")!)
