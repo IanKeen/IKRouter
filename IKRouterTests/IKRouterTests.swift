@@ -37,4 +37,24 @@ class IKRouterTests: XCTestCase {
         let result = router.handleURL(NSURL(string: "myapp://route/two")!)
         XCTAssertFalse(result)
     }
+    func test_IKRouter_whenRouteIsRegistered_itShould_replaceParametersWithPassedData() {
+        let router = IKRouter()
+        router.registerRouteHandler("myapp://route/:one") { match in
+            return match.parameters[":one"] == "testParameter"
+        }
+        
+        let result = router.handleURL(NSURL(string: "myapp://route/testParameter")!)
+        XCTAssertTrue(result)
+    }
+    func test_IKRouter_whenRouteIsRegistered_itShould_makePassedQueryPairsAvailable() {
+        let router = IKRouter()
+        router.registerRouteHandler("myapp://route/:one") { match in
+            let first = (match.query["foo"] == "bar")
+            let second = (match.query["this"] == "that")
+            return (first && second)
+        }
+        
+        let result = router.handleURL(NSURL(string: "myapp://route/testParameter?foo=bar&this=that")!)
+        XCTAssertTrue(result)
+    }
 }
