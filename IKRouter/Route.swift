@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct Route {
+struct Route {
     let url: String
     let components: RouteComponents
     
