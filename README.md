@@ -3,7 +3,7 @@
 ## What does it do?
 Once you have made your `UIViewController`s conform to `Routable` you can register them with the parameters that they represent in your registered url-scheme routes. `IKRouter` is then able to create an array of `UIViewController`s for you to display when a valid url is handled. All you need to do then is display them!
 
-`IKRouter` can also handle routes in the traditional way by simply registering a route and handling it with a funciton/closure.
+`IKRouter` can also handle routes in the traditional way by simply registering a route and handling it with a funciton/closure and the two methods can also be used together.
 
 An example route is:
 ```
@@ -40,10 +40,19 @@ router
     .registerRoutableWithParameter(ProjectViewController.self, parameter: ":projectId")
     .registerRoutableWithParameter(ItemViewController.self, parameter: ":itemId")
     .registerRouteHandler("myapp://project/:projectId/item/:itemId")
+    .registerRouteHandler("myapp://project/:projectId")
     .chainHandler = { viewControllers in
         navController.setViewControllers(viewControllers, animated: true)
     }
 ```
+
+## Things to note about using Routable
+
+* As many routes can be registered as you want in any combination as long as each one is:
+    * Unique
+    * Has a `Routable` registered for all parameters
+* If a route comes through and there is a parameter without a `Routable` the default handler will be used (if provided)
+* When registering a _route_ there is a `handler` parameter. This can be omitted when using `Routable`s.
 
 ## Non Routable Example
 If you have routes which might not suit the _automatic_ functionality provided by `Routable`s you can also register individual routes with their own handlers
@@ -61,6 +70,7 @@ router
         return true /* return false if we didn't handle the route */
     }
 ```
+NOTE: The handler for each route is used here (unlike above)
 
 ## UIViewController Presentation
 Every app has a slightly different UI hierarchy/architecture... for this reason `IKRouter` does not provide and automatic handling of `UIViewController` presentation but instead allows you to handle that yourself. Instead I have provided a `UINavigationController` extension that you can use to display the stack in different ways.
