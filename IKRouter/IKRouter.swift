@@ -18,12 +18,12 @@ private struct RouteHandlerRegistration {
     let matcher: RouteMatcher
 }
 
-enum IKRouterError: ErrorType {
+public enum IKRouterError: ErrorType {
     case InvalidRouteRegistration(String)
     case InvalidIncomingURL(String)
 }
 
-class IKRouter {
+public class IKRouter {
     typealias RouteHandlerCompletion = (Bool) -> Void
     typealias RoutableHandler = (MatchedRoute, [UIViewController]) -> Bool
     typealias ErrorHandler = (ErrorType) -> Void

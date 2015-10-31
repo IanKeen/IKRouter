@@ -40,7 +40,7 @@ struct Route {
     }
 }
 
-struct MatchedRoute {
+public struct MatchedRoute {
     let url: String
     let components: RouteComponents
     let parameters: [String: String]

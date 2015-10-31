@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct RouteComponents {
+public struct RouteComponents {
     let scheme: String
     let path: [String]
     let query: [String: String]

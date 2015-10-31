@@ -9,7 +9,7 @@
 import UIKit
 
 extension UINavigationController {
-    func setViewControllersPresentingLast(viewControllers: [UIViewController], animatedSet: Bool, animatedPresent: Bool, completion: (() -> Void)? = nil) {
+    public func setViewControllersPresentingLast(viewControllers: [UIViewController], animatedSet: Bool, animatedPresent: Bool, completion: (() -> Void)? = nil) {
         guard let presentingVC = viewControllers.last where viewControllers.count > 1 else {
             self.setViewControllers(viewControllers, animated: animatedSet)
             return
