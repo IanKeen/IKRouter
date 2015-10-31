@@ -47,7 +47,7 @@ class IKRouter {
         self.parameterRoutables.append(registration)
         return self
     }
-    func registerRouteHandler(route: String, handler: ((MatchedRoute) -> Bool)?) -> IKRouter {
+    func registerRouteHandler(route: String, handler: ((MatchedRoute) -> Bool)? = nil) -> IKRouter {
         guard let matcher = RouteMatcher(url: route) else {
             self.errorHandler?(IKRouterError.InvalidRouteRegistration(route))
             return self

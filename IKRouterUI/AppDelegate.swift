@@ -37,9 +37,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .registerRoutableWithParameter(Red.self, parameter: URLParameters.Red.rawValue)
             .registerRoutableWithParameter(Green.self, parameter: URLParameters.Green.rawValue)
             .registerRoutableWithParameter(Blue.self, parameter: URLParameters.Blue.rawValue)
-            .registerRouteHandler(URLRoutes.RedGreenBlue.rawValue, handler: nil)
-            .registerRouteHandler(URLRoutes.GreenBlueRed.rawValue, handler: nil)
-            .registerRouteHandler(URLRoutes.BlueRedGreen.rawValue, handler: nil)
+            .registerRouteHandler(URLRoutes.RedGreenBlue.rawValue)
+            .registerRouteHandler(URLRoutes.GreenBlueRed.rawValue)
+            .registerRouteHandler(URLRoutes.BlueRedGreen.rawValue)
             .chainHandler = self.routeHandler
     }
     private func routeHandler(viewControllers: [UIViewController]) -> Bool {
