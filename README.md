@@ -58,7 +58,6 @@ router
 If you have routes which might not suit the _automatic_ functionality provided by `Routable`s you can also register individual routes with their own handlers
 
 ```swift
-let navController = UINavigationController()
 let router = IKRouter()
 router
     .registerRouteHandler("myapp://project/:projectId/item/:itemId") { match in
