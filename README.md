@@ -17,7 +17,7 @@ To use the `Routable`s to automatically create your UI stack
 1. Make any `UIViewController` that can be linked to a route parameter conform to `Routable`.
 2. Register these with your `IKRouter` instance.
 3. Register the routes that _use_ those parameters.
-4. Handle the chain of `UIViewController`s via the `chainHandler` closure/function.
+4. Handle the chain of `UIViewController`s via the `routableHandler` closure/function.
 
 ## The Routable protocol
 The `Routable` protocol consists of a single simple method which when give a `MatchedRoute` returns an instance of the `Routable`.
@@ -41,7 +41,7 @@ router
     .registerRoutableWithParameter(ItemViewController.self, parameter: ":itemId")
     .registerRouteHandler("myapp://project/:projectId/item/:itemId")
     .registerRouteHandler("myapp://project/:projectId")
-    .chainHandler = { viewControllers in
+    .routableHandler = { match, viewControllers in
         navController.setViewControllers(viewControllers, animated: true)
     }
 ```
@@ -77,7 +77,7 @@ Every app has a slightly different UI hierarchy/architecture... for this reason 
 Currently there is just a simple method that will take a stack of `UIViewController`s; push all but the last and _present_ the last item in the stack like so:
 
 ```swift
-router.chainHandler = { viewControllers in
+router.routableHandler = { match, viewControllers in
     navController.setViewControllersPresentingLast(viewControllers, animatedSet: true, animatedPresent: true)
 }
 ```
