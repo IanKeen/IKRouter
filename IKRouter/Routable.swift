@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol Routable {
+public protocol Routable {
     static func instanceForRoute(route: MatchedRoute) -> Routable?
 }

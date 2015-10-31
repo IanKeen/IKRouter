@@ -24,20 +24,20 @@ public enum IKRouterError: ErrorType {
 }
 
 public class IKRouter {
-    typealias RouteHandlerCompletion = (Bool) -> Void
-    typealias RoutableHandler = (MatchedRoute, [UIViewController]) -> Bool
-    typealias ErrorHandler = (ErrorType) -> Void
+    public typealias RouteHandlerCompletion = (Bool) -> Void
+    public typealias RoutableHandler = (MatchedRoute, [UIViewController]) -> Bool
+    public typealias ErrorHandler = (ErrorType) -> Void
     
     //MARK: - Private Properties
     private var parameterRoutables = [RoutableParameterRegistration]()
     private var routeHandlers = [RouteHandlerRegistration]()
     
     //MARK: - Public Properties
-    var errorHandler: ErrorHandler?
-    var routableHandler: RoutableHandler?
+    public var errorHandler: ErrorHandler?
+    public var routableHandler: RoutableHandler?
     
     //MARK: - Public
-    func registerRoutableWithParameter<T: UIViewController where T: Routable>(routable: T.Type, parameter: String) -> IKRouter {
+    public func registerRoutableWithParameter<T: UIViewController where T: Routable>(routable: T.Type, parameter: String) -> IKRouter {
         //
         //TODO -    validate the passed parameter to make sure its valid
         //          we only want a _single_ parameter, no multiples, no wildcards
@@ -47,7 +47,7 @@ public class IKRouter {
         self.parameterRoutables.append(registration)
         return self
     }
-    func registerRouteHandler(route: String, handler: ((MatchedRoute) -> Bool)? = nil) -> IKRouter {
+    public func registerRouteHandler(route: String, handler: ((MatchedRoute) -> Bool)? = nil) -> IKRouter {
         guard let matcher = RouteMatcher(url: route) else {
             self.errorHandler?(IKRouterError.InvalidRouteRegistration(route))
             return self
@@ -56,7 +56,7 @@ public class IKRouter {
         self.routeHandlers.append(registration)
         return self
     }
-    func handleURL(url: NSURL, completion: RouteHandlerCompletion? = nil) -> Bool {
+    public func handleURL(url: NSURL, completion: RouteHandlerCompletion? = nil) -> Bool {
         var handled: Bool?
         defer { completion?(handled ?? false) }
         

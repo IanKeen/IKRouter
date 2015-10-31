@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Route {
+public struct Route {
     let url: String
     let components: RouteComponents
     
@@ -41,10 +41,10 @@ struct Route {
 }
 
 public struct MatchedRoute {
-    let url: String
-    let components: RouteComponents
-    let parameters: [String: String]
-    let query: [String: String]
+    public let url: String
+    public let components: RouteComponents
+    public let parameters: [String: String]
+    public let query: [String: String]
     
     init(route: Route, parameters: [String: String]) {
         self.url = route.url
@@ -53,7 +53,7 @@ public struct MatchedRoute {
         self.query = route.components.query
     }
     
-    subscript (parameterOrQuery: String) -> String? {
+    public subscript (parameterOrQuery: String) -> String? {
         get { return self.parameters[parameterOrQuery] ?? self.query[parameterOrQuery] }
     }
 }

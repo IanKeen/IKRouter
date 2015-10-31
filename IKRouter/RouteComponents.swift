@@ -9,9 +9,9 @@
 import Foundation
 
 public struct RouteComponents {
-    let scheme: String
-    let path: [String]
-    let query: [String: String]
+    public let scheme: String
+    public let path: [String]
+    public let query: [String: String]
     
     init?(url: NSURL) {
         self.init(url: url.absoluteString)
