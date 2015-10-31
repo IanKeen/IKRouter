@@ -84,6 +84,14 @@ router.routableHandler = { match, viewControllers in
 
 If there are other means of displaying a stack you think would be useful here feel free to add an issue or pull request, both are welcome!
 
+# Installation
+Install via cocoapods by adding the following to your Podfile
+
+```
+pod "IKRouter", "~>1.0"
+```
+
+or manually by adding the source files from the IKRouter subfolder to your project.
+
 # The rest...
 There is an included app so you can see it in action.
-
