@@ -37,6 +37,7 @@ public class IKRouter {
     public var routableHandler: RoutableHandler?
     
     //MARK: - Public
+    public init() { }
     public func registerRoutableWithParameter<T: UIViewController where T: Routable>(routable: T.Type, parameter: String) -> IKRouter {
         //
         //TODO -    validate the passed parameter to make sure its valid
