@@ -27,6 +27,8 @@
 		32E364511BE33E6100E9A6FD /* RouteMatcherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364501BE33E6100E9A6FD /* RouteMatcherTests.swift */; settings = {ASSET_TAGS = (); }; };
 		32E364531BE33F7100E9A6FD /* IKRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364521BE33F7100E9A6FD /* IKRouterTests.swift */; settings = {ASSET_TAGS = (); }; };
 		32E364551BE3EE7700E9A6FD /* MatchedRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E364541BE3EE7700E9A6FD /* MatchedRouteTests.swift */; settings = {ASSET_TAGS = (); }; };
+		32E3645D1BE447BD00E9A6FD /* UINavigationController+RoutingExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E3645C1BE447BD00E9A6FD /* UINavigationController+RoutingExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		32E3645F1BE468E000E9A6FD /* UINavigationControllerExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32E3645E1BE468E000E9A6FD /* UINavigationControllerExtensionTests.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +66,8 @@
 		32E364501BE33E6100E9A6FD /* RouteMatcherTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteMatcherTests.swift; sourceTree = "<group>"; };
 		32E364521BE33F7100E9A6FD /* IKRouterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IKRouterTests.swift; sourceTree = "<group>"; };
 		32E364541BE3EE7700E9A6FD /* MatchedRouteTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchedRouteTests.swift; sourceTree = "<group>"; };
+		32E3645C1BE447BD00E9A6FD /* UINavigationController+RoutingExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+RoutingExtensions.swift"; sourceTree = "<group>"; };
+		32E3645E1BE468E000E9A6FD /* UINavigationControllerExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtensionTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,7 @@
 				32E364231BE2D64100E9A6FD /* RouteComponents.swift */,
 				32E364241BE2D64100E9A6FD /* RouteMatcher.swift */,
 				32E364251BE2D64100E9A6FD /* IKRouter.swift */,
+				32E3645C1BE447BD00E9A6FD /* UINavigationController+RoutingExtensions.swift */,
 			);
 			path = IKRouter;
 			sourceTree = "<group>";
@@ -124,6 +129,7 @@
 				32E3644C1BE3370900E9A6FD /* RouteComponentsTests.swift */,
 				32E364501BE33E6100E9A6FD /* RouteMatcherTests.swift */,
 				32E364521BE33F7100E9A6FD /* IKRouterTests.swift */,
+				32E3645E1BE468E000E9A6FD /* UINavigationControllerExtensionTests.swift */,
 			);
 			path = IKRouterTests;
 			sourceTree = "<group>";
@@ -256,6 +262,7 @@
 				32E364431BE2D65300E9A6FD /* ViewController.swift in Sources */,
 				32E3643E1BE2D65300E9A6FD /* Blue.swift in Sources */,
 				32E3643D1BE2D65300E9A6FD /* BaseViewController.swift in Sources */,
+				32E3645D1BE447BD00E9A6FD /* UINavigationController+RoutingExtensions.swift in Sources */,
 				32E364281BE2D64100E9A6FD /* RouteComponents.swift in Sources */,
 				32E364421BE2D65300E9A6FD /* URLRoutes.swift in Sources */,
 				32E364411BE2D65300E9A6FD /* Red.swift in Sources */,
@@ -267,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32E3644D1BE3370900E9A6FD /* RouteComponentsTests.swift in Sources */,
+				32E3645F1BE468E000E9A6FD /* UINavigationControllerExtensionTests.swift in Sources */,
 				32E364511BE33E6100E9A6FD /* RouteMatcherTests.swift in Sources */,
 				32E364531BE33F7100E9A6FD /* IKRouterTests.swift in Sources */,
 				32E364551BE3EE7700E9A6FD /* MatchedRouteTests.swift in Sources */,
