@@ -25,7 +25,7 @@ enum IKRouterError: ErrorType {
 
 class IKRouter {
     typealias RouteHandlerCompletion = (Bool) -> Void
-    typealias RouteChainHandler = [UIViewController] -> Bool
+    typealias RoutableHandler = (MatchedRoute, [UIViewController]) -> Bool
     typealias ErrorHandler = (ErrorType) -> Void
     
     //MARK: - Private Properties
@@ -34,7 +34,7 @@ class IKRouter {
     
     //MARK: - Public Properties
     var errorHandler: ErrorHandler?
-    var chainHandler: RouteChainHandler?
+    var routableHandler: RoutableHandler?
     
     //MARK: - Public
     func registerRoutableWithParameter<T: UIViewController where T: Routable>(routable: T.Type, parameter: String) -> IKRouter {
@@ -66,10 +66,10 @@ class IKRouter {
         }
         guard let handlerAndMatched = self.routeHandlerAndMatchedRoute(route) else { return false }
         
-        if let controllerChain = self.routableChain(handlerAndMatched.registration), let chainHandler = self.chainHandler {
+        if let controllerChain = self.routableChain(handlerAndMatched.registration), let routableHandler = self.routableHandler {
             let controllers = controllerChain
                 .flatMap { $0.routableType.instanceForRoute(handlerAndMatched.matchedRoute) as? UIViewController }
-            handled = chainHandler(controllers)
+            handled = routableHandler(handlerAndMatched.matchedRoute, controllers)
             
         } else {
             handled = handlerAndMatched.registration.routeHandler?(handlerAndMatched.matchedRoute)

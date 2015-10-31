@@ -40,9 +40,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .registerRouteHandler(URLRoutes.RedGreenBlue.rawValue)
             .registerRouteHandler(URLRoutes.GreenBlueRed.rawValue)
             .registerRouteHandler(URLRoutes.BlueRedGreen.rawValue)
-            .chainHandler = self.routeHandler
+            .routableHandler = self.routeHandler
     }
-    private func routeHandler(viewControllers: [UIViewController]) -> Bool {
+    private func routeHandler(match: MatchedRoute, viewControllers: [UIViewController]) -> Bool {
         let stack = [self.navController.viewControllers.first!] + viewControllers
         self.navController.setViewControllers(stack, animated: true)
         return true

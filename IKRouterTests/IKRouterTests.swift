@@ -88,7 +88,7 @@ class IKRouterTests: XCTestCase {
             .registerRoutableWithParameter(Green.self, parameter: ":green")
             .registerRoutableWithParameter(Blue.self, parameter: ":blue")
             .registerRouteHandler("myapp://red/:red/green/:green/blue/:blue", handler: nil)
-            .chainHandler = { viewControllers in
+            .routableHandler = { match, viewControllers in
                 let red = viewControllers[0] is Red
                 let green = viewControllers[1] is Green
                 let blue = viewControllers[2] is Blue
@@ -104,7 +104,7 @@ class IKRouterTests: XCTestCase {
             .registerRoutableWithParameter(Red.self, parameter: ":red")
             .registerRoutableWithParameter(Green.self, parameter: ":green")
             .registerRouteHandler("myapp://red/:red/green/:green/blue/:blue", handler: nil)
-            .chainHandler = { viewControllers in
+            .routableHandler = { match, viewControllers in
                 let red = viewControllers[0] is Red
                 let green = viewControllers[1] is Green
                 let blue = viewControllers[2] is Blue
@@ -126,7 +126,7 @@ class IKRouterTests: XCTestCase {
                 handledByDefault = true
                 return false
             }
-            .chainHandler = { viewControllers in
+            .routableHandler = { match, viewControllers in
                 let red = viewControllers[0] is Red
                 let green = viewControllers[1] is Green
                 let blue = viewControllers[2] is Blue
